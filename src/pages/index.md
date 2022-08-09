@@ -1,12 +1,11 @@
 ---
 templateKey: index-page
 beforetitle: Hi my name is
-title: John Carlo Santos
+title: Carlo Santos
 subtitle: I build things for the web.
 shortdesc: I’m a software engineer specializing in building (and occasionally
   designing) exceptional digital experiences. Currently, I’m focused on building
   accessible, human-centered products.
-image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
@@ -71,4 +70,5 @@ main:
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
+image: /img/home-jumbotron.jpg
 ---
