@@ -46,8 +46,10 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
+          - { label: Before Title, name: beforetitle, widget: string }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
+          - { label: Sub-title, name: subtitle, widget: string }
+          - { label: Short Description, name: shortdesc, widget: text }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {

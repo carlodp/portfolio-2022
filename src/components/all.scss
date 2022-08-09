@@ -1,0 +1,24 @@
+//Site Theme Colors
+$semi-black: #0B0C10;
+$blue-gray: #1F2833;
+$gray: #C5C6C7;
+$teal: #66FCF1;
+$dark-teal: #45A29E;
+$white: #FFFFFF;
+
+//Site Fonts [Inter + Source Code Pro]
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;300;400;500;600&display=swap');
+
+//PX to REM Function
+@function rem($value) {
+    $remValue: calc($value / 16) + rem; 
+    @return $remValue;
+}
+
+.navbar {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+  }
+}
