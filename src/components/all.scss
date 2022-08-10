@@ -268,3 +268,11 @@ header {
     line-height: 1.4;
   }
 }
+
+.about {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
