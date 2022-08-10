@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from "../img/logo.svg";
 import NavMenu from "./NavMenu";
 
 const Navbar = class extends React.Component {
@@ -36,7 +35,7 @@ const Navbar = class extends React.Component {
           this.setState({ fixed: 'scroll-down' });
       }
 
-      if(this.prev == 1) {
+      if(this.prev === 1) {
         console.log('dapat 1');
         this.setState({ fixed: '' });
       }
@@ -56,7 +55,7 @@ const Navbar = class extends React.Component {
         >
           <div className="container">
             <div className="navbar-brand">
-              <Link to="/" className="navbar-item" title="Logo">
+              <Link to="/" className="navbar-item site-logo" title="Logo">
                 {/* <img src={logo} alt="Kaldi" style={{ width: "88px" }} /> */}
                 Carlo Santos
               </Link>

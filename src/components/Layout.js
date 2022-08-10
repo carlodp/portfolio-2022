@@ -1,10 +1,9 @@
-import * as React from "react";
+import * as React from 'react';
 import { Helmet } from "react-helmet";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import "./all.scss";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
+import Pagecontent from './Pagecontent';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -54,9 +53,7 @@ const TemplateWrapper = ({ children }) => {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={`${withPrefix("/")}img/og-cover.jpg`} />
       </Helmet>
-      <Navbar />
-      <main>{children}</main>
-      <Footer />
+      <Pagecontent pageContent={children} />
     </div>
   );
 };
