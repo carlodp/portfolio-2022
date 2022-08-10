@@ -1,86 +1,69 @@
 import React from "react";
 import { Link } from "gatsby";
 import logo from "../img/logo.svg";
+import NavMenu from "./NavMenu";
 
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      active: false,
-      navBarActiveClass: "",
+        foo: false,
+        fixed: "",
+        navSticky: "",
     };
+  };
+
+  componentDidMount() {
+      this.prev = window.scrollY;
+      window.addEventListener('scroll', this.handleScroll, { passive: true });
   }
 
-  toggleHamburger() {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: "is-active",
-            })
-          : this.setState({
-              navBarActiveClass: "",
-            });
-      }
-    );
+  componentWillUnmount() {
+      window.removeEventListener('scroll', this.handleScroll);
   }
+
+  handleScroll = (e) => {
+      const window = e.currentTarget;
+  
+      console.log(this.prev);
+
+      if (this.prev > window.scrollY) {
+          console.log("scrolling up");
+          this.setState({ fixed: 'scroll-up' });
+      } else if (this.prev < window.scrollY) {
+          console.log("scrolling down");
+          this.setState({ fixed: 'scroll-down' });
+      }
+
+      if(this.prev == 1) {
+        console.log('dapat 1');
+        this.setState({ fixed: '' });
+      }
+      
+      this.prev = window.scrollY;
+  }
+
+
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              role="menuitem"
-              tabIndex={0}
-              onKeyPress={() => this.toggleHamburger()}
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
+      <header className={`${this.state.fixed}`}>
+        <nav
+          className="navbar is-transparent"
+          role="navigation"
+          aria-label="main-navigation"
+        >
+          <div className="container">
+            <div className="navbar-brand">
+              <Link to="/" className="navbar-item" title="Logo">
+                <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
               </Link>
             </div>
+            <NavMenu />
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
     );
   }
 };
