@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-beforetitle: Sup, my name iss
+beforetitle: Sup, my name is
 title: Carlo Santos
 subtitle: I build things for the web.
 shortdesc: I’m a software engineer specializing in building (and occasionally
