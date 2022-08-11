@@ -1,14 +1,7 @@
 ---
-templateKey: index-page
-landingsection:
-  beforetitle: Sup, my name is
-  title: Carlo Santos.
-  subtitle: I build things for the web.
-  shortdesc: I’m a software engineer specializing in building (and occasionally
-    designing) exceptional digital experiences. Currently, I’m focused on
-    building accessible, human-centered products.
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
+templateKey: index-page
 mainpitch:
   title: Why Kaldi
   description: >
@@ -54,12 +47,28 @@ intro:
 shortdesc: I’m a software engineer specializing in building (and occasionally
   designing) exceptional digital experiences. Currently, I’m focused on building
   accessible, human-centered products.
+landingsection:
+  beforetitle: Sup, my name is
+  title: Carlo Santos.
+  subtitle: I build things for the web.
+  shortdesc: I’m a software engineer specializing in building (and occasionally
+    designing) exceptional digital experiences. Currently, I’m focused on
+    building accessible, human-centered products.
+about:
+  shortdesc: >-
+    Hello! My name is Carlo and I enjoy creating things that live on the
+    internet. My interest in web development started back in 2012 when I decided
+    to try editing custom Tumblr themes — turns out hacking together a custom
+    reblog button taught me a lot about HTML & CSS!
+
+
+    Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
+
+
+    I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.
+  techstacks: []
 subtitle: I build things for the web.
 title: Carlo Santos.
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
 main:
   heading: Great coffee with no compromises
   description: >
@@ -78,4 +87,8 @@ main:
     image: /img/products-grid1.jpg
 beforetitle: Sup, my name is
 image: /img/home-jumbotron.jpg
+description: Kaldi is the ultimate spot for coffee lovers who want to learn
+  about their java’s origin and support the farmers that grew it. We take coffee
+  production, roasting and brewing seriously and we’re glad to pass that
+  knowledge to anyone.
 ---
