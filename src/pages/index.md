@@ -48,7 +48,7 @@ about:
         - stackname: Wireframing
         - stackname: User Testing
   description: >-
-    Hello! My name is Brittany and I enjoy creating things that live on the
+    Hello! My name is Carlew and I enjoy creating things that live on the
     internet. My interest in web development started back in 2012 when I decided
     to try editing custom Tumblr themes — turns out hacking together a custom
     reblog button taught me a lot about HTML & CSS!
