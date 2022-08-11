@@ -1,11 +1,12 @@
 ---
 templateKey: index-page
-beforetitle: Sup, my name is
-title: Carlo Santos.
-subtitle: I build things for the web.
-shortdesc: I’m a software engineer specializing in building (and occasionally
-  designing) exceptional digital experiences. Currently, I’m focused on building
-  accessible, human-centered products.
+landingsection:
+  beforetitle: Sup, my name is
+  title: Carlo Santos.
+  subtitle: I build things for the web.
+  shortdesc: I’m a software engineer specializing in building (and occasionally
+    designing) exceptional digital experiences. Currently, I’m focused on
+    building accessible, human-centered products.
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
@@ -15,10 +16,6 @@ mainpitch:
     shouldn't just taste good, it should do good too. We source all of our beans
     directly from small scale sustainable farmers and make sure part of the
     profits are reinvested in their communities.
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -54,6 +51,15 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
+shortdesc: I’m a software engineer specializing in building (and occasionally
+  designing) exceptional digital experiences. Currently, I’m focused on building
+  accessible, human-centered products.
+subtitle: I build things for the web.
+title: Carlo Santos.
+description: Kaldi is the ultimate spot for coffee lovers who want to learn
+  about their java’s origin and support the farmers that grew it. We take coffee
+  production, roasting and brewing seriously and we’re glad to pass that
+  knowledge to anyone.
 main:
   heading: Great coffee with no compromises
   description: >
@@ -70,5 +76,6 @@ main:
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
+beforetitle: Sup, my name is
 image: /img/home-jumbotron.jpg
 ---
