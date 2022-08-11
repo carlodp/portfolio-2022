@@ -65,7 +65,9 @@ body {
     border: rem(4) solid $blue-gray;
   }
 
- 
+  a {
+    color: $dark-teal;
+  }
 }
 
 .loader-wrapper {
@@ -287,9 +289,10 @@ body {
 
     .before-title {
       font-family: 'Source Code Pro', monospace;
-      font-size: rem(16);
+      font-size: rem(18);
       color: $teal;
       margin-bottom: rem(15);
+      line-height: 1;
     }
 
     .title {
@@ -327,7 +330,7 @@ body {
       font-family: "Source Code Pro", monospace;
       font-size: rem(26);
       color: $teal;
-      margin: 0 0 rem(10) 0;
+      margin: 0 0 rem(26) 0;
       letter-spacing: rem(-2);
     }
 
@@ -337,6 +340,17 @@ body {
       line-height: 1.4;
       max-width: rem(1000);
       margin: 0 0 rem(25) 0;
+      white-space: pre-line;
+
+      p {
+        &:first-child {
+          margin-top: 0;
+        }
+
+        a {
+          color: $dark-teal;
+        }
+      }
     }
 
     .techstack-container {

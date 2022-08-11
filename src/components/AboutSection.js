@@ -1,5 +1,6 @@
 import React from "react";
 import Techstacks from "./Techstacks";
+import Markdown from 'markdown-to-jsx';
 
 export default function AboutSection(props) {
   const {
@@ -11,7 +12,9 @@ export default function AboutSection(props) {
     <React.Fragment>
       <section className="about">
         <p className="section-name">01. About</p>
-        <p className="description">{description}</p>
+        <p className="description">
+          <Markdown>{description}</Markdown>
+        </p>
         <Techstacks techstacks={techstacks}/>
       </section>
     </React.Fragment>
