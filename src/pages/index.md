@@ -54,9 +54,6 @@ about:
     reblog button taught me a lot about HTML & CSS!
 
 
-    <br/><br/>
-
-
     Fast-forward to today, and I’ve had the privilege of working at [an advertising agency](https://us.mullenlowe.com/), [a start-up](https://starry.com/), [a huge corporation](https://www.apple.com/), and [a student-led design studio](https://scout.camd.northeastern.edu/). My main focus these days is building accessible, inclusive products and digital experiences at [Upstatement](https://upstatement.com/) for a variety of clients.
 
 
