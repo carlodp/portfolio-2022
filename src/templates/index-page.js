@@ -7,41 +7,27 @@ import AboutSection from "../components/AboutSection";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
-  image,
-  beforetitle,
-  title,
-  subtitle,
-  heading,
-  shortdesc,
-  mainpitch,
-  description,
-  intro,
+  landingsection,
+  aboutsection,
 }) => {
 
   return (
     <div>
       <LandingSection 
-        beforetitle={beforetitle} 
-        title={title} 
-        subtitle={subtitle} 
-        shortdesc={shortdesc} 
+        beforetitle={landingsection.beforetitle} 
+        title={landingsection.title} 
+        subtitle={landingsection.subtitle} 
+        shortdesc={landingsection.shortdesc} 
       />
-      <AboutSection />
+      <AboutSection 
+
+      />
     </div>
   );
 };
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  beforetitle: PropTypes.string,
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  shortdesc: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
+  landingsection: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
 };
@@ -52,15 +38,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        beforetitle={frontmatter.beforetitle}
-        title={frontmatter.title}
-        subtitle={frontmatter.subtitle}
-        shortdesc={frontmatter.shortdesc}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        landingsection={frontmatter.landingsection}
       />
     </Layout>
   );
@@ -80,33 +58,11 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        beforetitle
-        title
-        subtitle
-        shortdesc
-        image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
-        heading
-        subheading
-        mainpitch {
+        landingsection {
+          beforetitle
+          shortdesc
+          subtitle
           title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
-            text
-          }
-          heading
-          description
         }
       }
     }
