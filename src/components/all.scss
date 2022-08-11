@@ -322,6 +322,47 @@ body {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+
+    .section-name {
+      font-family: "Source Code Pro", monospace;
+      font-size: rem(26);
+      color: $teal;
+      margin: 0 0 rem(10) 0;
+      letter-spacing: rem(-2);
+    }
+
+    .description {
+      color: $gray;
+      font-size: rem(20);
+      line-height: 1.4;
+      max-width: rem(1000);
+      margin: 0 0 rem(25) 0;
+    }
+
+    .techstack-container {
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+
+      .techstack-column {
+        .techstack-title {
+          text-transform: uppercase;
+          color: $white;
+          font-weight: 800;
+        }
+
+        .skills-column {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            color: $gray;
+            margin-bottom: rem(10);
+          }
+        }
+      }
+    }
   }
 
 }

@@ -20,7 +20,8 @@ export const IndexPageTemplate = ({
         shortdesc={landingsection.shortdesc} 
       />
       <AboutSection 
-
+        description={aboutsection.description}
+        techstacks={aboutsection.techstacks}
       />
     </div>
   );
@@ -28,6 +29,9 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
   landingsection: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
+  aboutsection: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
 };
@@ -39,6 +43,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         landingsection={frontmatter.landingsection}
+        aboutsection={frontmatter.about}
       />
     </Layout>
   );
@@ -56,13 +61,22 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
       frontmatter {
         landingsection {
           beforetitle
           shortdesc
           subtitle
           title
+        }
+        about {
+          description
+          techstacks {
+            techstackname
+            stack {
+              stackname
+            }
+          }
         }
       }
     }

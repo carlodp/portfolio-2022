@@ -64,7 +64,7 @@ collections:
             widget: object,
             fields:
               [
-                { label: Description, name: description, widget: text },
+                { label: Description, name: description, widget: markdown },
                 {
                   label: Tech Stacks,
                   name: techstacks,
