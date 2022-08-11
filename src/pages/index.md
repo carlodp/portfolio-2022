@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 beforetitle: Sup, my name is
-title: Carlo Santos
+title: Carlo Santos.
 subtitle: I build things for the web.
 shortdesc: I’m a software engineer specializing in building (and occasionally
   designing) exceptional digital experiences. Currently, I’m focused on building
