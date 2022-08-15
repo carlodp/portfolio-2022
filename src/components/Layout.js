@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Helmet } from "react-helmet";
 import "./all.scss";
+import "./transitions.scss";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 import Pagecontent from './Pagecontent';
