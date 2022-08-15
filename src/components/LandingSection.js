@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import ScrollReveal from 'scrollreveal';
 import { navDelay, loaderDelay } from '../utils/index';
 
 export default function LandingSection(props) {
@@ -38,7 +37,7 @@ export default function LandingSection(props) {
         <TransitionGroup component={null}>
           {isMounted &&
             items.map((item, i) => (
-              <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
+              <CSSTransition in={isMounted} key={i} classNames="fadeup" timeout={loaderDelay}>
                 <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
               </CSSTransition>
             ))}
