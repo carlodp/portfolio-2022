@@ -1,5 +1,4 @@
 import React from "react";
-import TechStacks from "./TechStacks";
 import Markdown from 'markdown-to-jsx';
 
 export default function AboutSection(props) {
@@ -15,7 +14,19 @@ export default function AboutSection(props) {
         <div className="description">
           <Markdown>{description}</Markdown>
         </div>
-        <TechStacks techstacks={techstacks}/>
+
+        <div className="techstack-container">
+          {techstacks.map((item, i) => (
+          <div key={i} className="techstack-column">
+              <p className="techstack-title">{item.techstackname}</p>
+              <ul className="skills-column">
+                  {item.stack.map((item, i) => (
+                      <li key={i} className="techstack-item">{item.stackname}</li>
+                  ))}
+              </ul>
+          </div>
+          ))}
+        </div>
       </section>
     </React.Fragment>
   );
