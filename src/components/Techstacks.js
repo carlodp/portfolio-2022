@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const Techstacks = ({ techstacks }) => (
+const TechStacks = ({ techstacks }) => (
   <div className="techstack-container">
     {techstacks.map((item, i) => (
     <div key={i} className="techstack-column">
@@ -15,4 +15,4 @@ const Techstacks = ({ techstacks }) => (
   </div>
 );
 
-export default Techstacks;
+export default TechStacks;
