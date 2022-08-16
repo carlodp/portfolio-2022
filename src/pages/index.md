@@ -61,4 +61,27 @@ about:
 
 
     Here are a few technologies I’ve been working with recently:
+  heading: 01/ About
+expertise:
+  heading: 02/ Expertise
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+    est laborum.
+  companies:
+    - companyname: Incenter Solutions
+      jobtitle: WordPress Developer
+      dateattended: October 2020 – Present
+    - companyname: Bigcat Software Solutions
+      jobtitle: Front-End Developer
+      dateattended: June 2018 – July 2020
+    - companyname: Xibre Digital
+      jobtitle: Lead Web Developer
+      dateattended: July 2016 – June 2018
+    - companyname: Innov8tive Design & Development
+      jobtitle: Jr. Web Developer
+      dateattended: July 2015 – July 2016
 ---
