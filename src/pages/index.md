@@ -75,13 +75,25 @@ expertise:
     - companyname: Incenter Solutions
       jobtitle: WordPress Developer
       dateattended: October 2020 – Present
+      roles:
+        - roledescription: Role 1
+        - roledescription: Role 2
     - companyname: Bigcat Software Solutions
       jobtitle: Front-End Developer
       dateattended: June 2018 – July 2020
+      roles:
+        - roledescription: Role 3
+        - roledescription: Role 4
     - companyname: Xibre Digital
       jobtitle: Lead Web Developer
       dateattended: July 2016 – June 2018
+      roles:
+        - roledescription: Role 5
+        - roledescription: Role 6
     - companyname: Innov8tive Design & Development
       jobtitle: Jr. Web Developer
       dateattended: July 2015 – July 2016
+      roles:
+        - roledescription: Role 7
+        - roledescription: Role 8
 ---
