@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
-import LandingSection from "../components/LandingSection";
-import AboutSection from "../components/AboutSection";
+import LandingSection from "../components/sections/LandingSection";
+import AboutSection from "../components/sections/AboutSection";
+import ExpertiseSection from '../components/sections/ExpertiseSection';
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -23,6 +24,7 @@ export const IndexPageTemplate = ({
         description={aboutsection.description}
         techstacks={aboutsection.techstacks}
       />
+      <ExpertiseSection />
     </div>
   );
 };

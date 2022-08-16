@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { navDelay, loaderDelay } from '../utils/index';
+import { navDelay, loaderDelay } from '../../utils/index';
 
 export default function LandingSection(props) {
   const {
@@ -29,7 +29,9 @@ export default function LandingSection(props) {
 
   const three = <p className="short-description">{shortdesc}</p>;
   
-  const items = [one, two, three];
+  const four = <a className="cta-button" href="#">Hit me up!</a>;
+
+  const items = [one, two, three, four];
 
   return (
     <React.Fragment>
