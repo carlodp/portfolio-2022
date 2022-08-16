@@ -64,6 +64,7 @@ collections:
             widget: object,
             fields:
               [
+                { label: Heading, name: heading, widget: string },
                 { label: Description, name: description, widget: markdown },
                 {
                   label: Tech Stacks,
@@ -79,6 +80,36 @@ collections:
                         fields:
                           [
                             { label: Stack Name, name: stackname, widget: string },
+                          ],
+                      },
+                    ],
+                },
+              ],
+            }
+          - {
+            label: Expertise Section,
+            name: expertise,
+            widget: object,
+            fields:
+              [
+                { label: Heading, name: heading, widget: string },
+                { label: Description, name: description, widget: markdown },
+                {
+                  label: Companies,
+                  name: companies,
+                  widget: list,
+                  fields:
+                    [
+                      { label: Company Name, name: companyname , widget: string },
+                      { label: Job Title, name: jobtitle , widget: string },
+                      { label: Date Attended, name: dateattended , widget: string },
+                      {
+                        label: Roles,
+                        name: roles,
+                        widget: list,
+                        fields:
+                          [
+                            { label: Role Description, name: roledescription, widget: string },
                           ],
                       },
                     ],
