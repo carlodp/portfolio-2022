@@ -12,7 +12,7 @@ export default function AboutSection(props) {
     <React.Fragment>
       <section className="about">
         <Reveal effect="fadein-up">
-          <p className="section-name">01. About</p>
+          <p className="section-name">01/ About</p>
           <div className="description">
             <Markdown>{description}</Markdown>
           </div>

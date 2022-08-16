@@ -82,27 +82,27 @@ const Menu = () => {
         
           <Reveal effect={`navbar-item fadein-down delay-1`} delay={100}>
             <Link className="navbar-link" to="#about">
-                <span>01.</span>About
+                <span>01/</span>About
             </Link>
           </Reveal>
           <Reveal effect={`navbar-item fadein-down delay-2`} delay={200}>
             <Link className="navbar-link" to="#expertise">
-                <span>02.</span>Expertise
+                <span>02/</span>Expertise
             </Link>
           </Reveal>
           <Reveal effect={`navbar-item fadein-down delay-3`} delay={300}>
             <Link className="navbar-link" to="#projects">
-                <span>03.</span>Projects
+                <span>03/</span>Projects
             </Link>
           </Reveal>
           <Reveal effect={`navbar-item fadein-down delay-4`} delay={400}>
             <Link className="navbar-link" to="#contact">
-                <span>04.</span>Contact
+                <span>04/</span>Contact
             </Link>
           </Reveal>
           <Reveal effect={`navbar-item fadein-down delay-5`} delay={500}>
             <Link className="navbar-link resume" to="#resume">
-                Resume
+              &lt;Resume/&gt;
             </Link>
           </Reveal>
       </div>

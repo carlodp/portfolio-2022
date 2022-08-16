@@ -67,6 +67,10 @@ body {
 
   a {
     color: $dark-teal;
+
+    &:hover {
+      background-color: #45a29e0d;
+    }
   }
 }
 
@@ -160,7 +164,7 @@ body {
           display: flex;
           align-items: center;
           transition: 0.4s;
-          
+
           &.burger-active {
             .navbar-mobile {
               right: 0;
@@ -266,9 +270,8 @@ body {
     
               &.resume {
                 display: inline-block;
-                width: rem(80);
                 border: rem(1) solid $teal;
-                padding: rem(10);
+                padding: rem(10) rem(20);
                 border-radius: rem(5);
                 color: $teal;
                 margin-left: rem(15);
@@ -319,6 +322,20 @@ body {
       margin: rem(25) 0 0 0;
       line-height: 1.4;
     }
+
+    .cta-button {
+      display: inline-block;
+      border: rem(1) solid $teal;
+      font-size: rem(18);
+      font-weight: 500;
+      padding: rem(15) rem(40);
+      border-radius: rem(5);
+      color: $teal;
+      text-align: center;
+      box-sizing: border-box;
+      text-decoration: none;
+      margin-top: rem(25);
+    }
   }
 
   .about {
@@ -330,9 +347,9 @@ body {
 
     .section-name {
       font-family: "Source Code Pro", monospace;
-      font-size: rem(26);
+      font-size: rem(22);
       color: $teal;
-      margin: 0 0 rem(26) 0;
+      margin: 0 0 rem(12) 0;
       letter-spacing: rem(-2);
     }
 
