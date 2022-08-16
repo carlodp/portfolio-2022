@@ -1,44 +1,86 @@
 $easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 
 .fadeup-enter {
-opacity: 0.01;
-transform: translateY(20px);
-transition: opacity 300ms $easing, transform 300ms $easing;
+    opacity: 0.01;
+    transform: translateY(20px);
+    transition: opacity 400ms $easing, transform 400ms $easing;
 }
 
 .fadeup-enter-active {
-opacity: 1;
-transform: translateY(0px);
-transition: opacity 300ms $easing, transform 300ms $easing;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 400ms $easing, transform 400ms $easing;
 }
 
 /* Fade down */
 .fadedown-enter {
-opacity: 0.02;
-transform: translateY(-20px);
-transition: opacity 300ms $easing, transform 300ms $easing;
+    opacity: 0.02;
+    transform: translateY(-20px);
+    transition: opacity 300ms $easing, transform 300ms $easing;
 }
 
 .fadedown-enter-active {
-opacity: 1;
-transform: translateY(0px);
-transition: opacity 300ms $easing, transform 300ms $easing;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 300ms $easing, transform 300ms $easing;
 }
 
 /* Fade */
 .fade-enter {
-opacity: 0;
+    opacity: 0;
 }
 .fade-enter-active {
-opacity: 1;
-transition: opacity 300ms $easing;
+    opacity: 1;
+    transition: opacity 300ms $easing;
 }
 
 .fade-exit {
-opacity: 1;
+    opacity: 1;
 }
 
 .fade-exit-active {
-opacity: 0;
-transition: opacity 300ms $easing;
+    opacity: 0;
+    transition: opacity 300ms $easing;
 }
+
+@keyframes fadein-up {
+    0% {
+        opacity: 0.01;
+        transform: translateY(20px);
+        transition: opacity 300ms $easing, transform 300ms $easing;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: opacity 300ms $easing, transform 300ms $easing;
+    }
+}
+
+@keyframes fadein-down {
+    0% {
+        opacity: 0.01;
+        transform: translateY(-20px);
+        transition: opacity 300ms $easing, transform 300ms $easing;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: opacity 300ms $easing, transform 300ms $easing;
+    }
+}
+
+@for $i from 1 through 10 {
+    $delay: 100 * $i;
+    .delay-#{$i} { 
+        transition-delay: $delay+ms;
+    }
+}
+
+.fadein-up {
+    animation-name: fadein-up;
+}
+
+.fadein-down {
+    animation-name: fadein-down;
+}
+

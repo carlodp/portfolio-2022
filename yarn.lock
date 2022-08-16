@@ -7677,18 +7677,6 @@
   "resolved" "https://registry.npmjs.org/is-docker/-/is-docker-2.2.1.tgz"
   "version" "2.2.1"
 
-"is-dom-node-list@^1.2.1":
-  "integrity" "sha512-P1H071iT5TGG8pAHslhrLDo/tQLYc8tGuWABVqhGU4l2mm7aDNb9cx2myQ2AujEQO6B2cAujcW4a0/+6UfXInw=="
-  "resolved" "https://registry.npmjs.org/is-dom-node-list/-/is-dom-node-list-1.2.1.tgz"
-  "version" "1.2.1"
-  dependencies:
-    "is-dom-node" "^1.0.4"
-
-"is-dom-node@^1.0.4":
-  "integrity" "sha512-NEnTHKCeyGJTL0cKdzATF8SWzyTMYf5CbNKWBvsXvyMxZG32g+a09qkeCbrfQNLTD85CbPeHb4YjIJCjyzF0yA=="
-  "resolved" "https://registry.npmjs.org/is-dom-node/-/is-dom-node-1.0.4.tgz"
-  "version" "1.0.4"
-
 "is-extendable@^0.1.0", "is-extendable@^0.1.1":
   "integrity" "sha1-YrEQ4omkcUGOPsNqYX1HLjAd/Ik="
   "resolved" "https://registry.npmjs.org/is-extendable/-/is-extendable-0.1.1.tgz"
@@ -9180,11 +9168,6 @@
   "integrity" "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw=="
   "resolved" "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz"
   "version" "1.2.5"
-
-"miniraf@1.0.0":
-  "integrity" "sha512-XpvhtJYzVrpXe+JoAthrT9E40NIrSDDMcdHEYL2M+lR/OCas0nadetcBBq/MWYqlgV5aDWVQ3mfAqd+fG6Y/EQ=="
-  "resolved" "https://registry.npmjs.org/miniraf/-/miniraf-1.0.0.tgz"
-  "version" "1.0.0"
 
 "mitt@^1.2.0":
   "integrity" "sha512-r6lj77KlwqLhIUku9UWYes7KJtsczvolZkzp8hbaDPPaE24OmWl5s539Mytlj22siEQKosZ26qCBgda2PKwoJw=="
@@ -11334,6 +11317,13 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.9.0.tgz"
   "version" "0.9.0"
 
+"react-reveal@^1.2.2":
+  "integrity" "sha512-JCv3fAoU6Z+Lcd8U48bwzm4pMZ79qsedSXYwpwt6lJNtj/v5nKJYZZbw3yhaQPPgYePo3Y0NOCoYOq/jcsisuw=="
+  "resolved" "https://registry.npmjs.org/react-reveal/-/react-reveal-1.2.2.tgz"
+  "version" "1.2.2"
+  dependencies:
+    "prop-types" "^15.5.10"
+
 "react-router-dom@^5.2.0":
   "integrity" "sha512-ObVBLjUZsphUUMVycibxgMdh5jJ1e3o+KpAZBVeHcNQZ4W+uUGGWsokurzlF4YOldQYRQL4y6yFRWM4m3svmuQ=="
   "resolved" "https://registry.npmjs.org/react-router-dom/-/react-router-dom-5.3.0.tgz"
@@ -11892,11 +11882,6 @@
     "remark-stringify" "^9.0.0"
     "unified" "^9.1.0"
 
-"rematrix@0.3.0":
-  "integrity" "sha512-xB/9ZvJIKaDgXX0qkvV9/pLD8zK23A6TVV6F8Vhsl+SrxbBeVYutz5uszxgC6Rt3RP9LZiH8OXaYjr+x6WXWmQ=="
-  "resolved" "https://registry.npmjs.org/rematrix/-/rematrix-0.3.0.tgz"
-  "version" "0.3.0"
-
 "remove-trailing-separator@^1.0.1":
   "integrity" "sha1-wkvOKig62tW8P1jg1IJJuSN52O8="
   "resolved" "https://registry.npmjs.org/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz"
@@ -12255,15 +12240,6 @@
     "@types/json-schema" "^7.0.8"
     "ajv" "^6.12.5"
     "ajv-keywords" "^3.5.2"
-
-"scrollreveal@^4.0.9":
-  "integrity" "sha512-fefGvzVS8YbXbDK1+T0kvy2yqxaiBJZeGUhPeqajf+7sGqtX4xikbKGAlzQuPCpswAMswx94ZwhDjXKnRIqW1w=="
-  "resolved" "https://registry.npmjs.org/scrollreveal/-/scrollreveal-4.0.9.tgz"
-  "version" "4.0.9"
-  dependencies:
-    "miniraf" "1.0.0"
-    "rematrix" "0.3.0"
-    "tealight" "0.3.6"
 
 "section-matter@^1.0.0":
   "integrity" "sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA=="
@@ -13298,14 +13274,6 @@
     "fs-constants" "^1.0.0"
     "inherits" "^2.0.3"
     "readable-stream" "^3.1.1"
-
-"tealight@0.3.6":
-  "integrity" "sha512-Dys3N8jFBThD9pNVpPCyUiu6DfWcTBdqWQJIvnAuVaFkGEdrPBJ43070vVbn6sTlLvn2IQK2zFW4FrVIrTo8eQ=="
-  "resolved" "https://registry.npmjs.org/tealight/-/tealight-0.3.6.tgz"
-  "version" "0.3.6"
-  dependencies:
-    "is-dom-node" "^1.0.4"
-    "is-dom-node-list" "^1.2.1"
 
 "teeny-tap@^0.2.0":
   "integrity" "sha1-Fn5kUYLQasIi1iuyq2eUenClimg="
