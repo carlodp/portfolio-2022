@@ -4,6 +4,7 @@ import Reveal from 'react-reveal/Reveal';
 
 export default function AboutSection(props) {
   const {
+    heading,
     description,
     techstacks
   } = props
@@ -12,7 +13,7 @@ export default function AboutSection(props) {
     <React.Fragment>
       <section className="about">
         <Reveal effect="fadein-up">
-          <p className="section-name">01/ About</p>
+          <p className="section-name">{heading}</p>
           <div className="description">
             <Markdown>{description}</Markdown>
           </div>
