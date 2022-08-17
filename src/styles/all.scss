@@ -53,6 +53,10 @@ body {
 
   &.menu-open {
     overflow: hidden;
+
+    header {
+      backdrop-filter: none !important;
+    }
   }
 
   &::-webkit-scrollbar {
@@ -70,6 +74,15 @@ body {
 
     &:hover {
       background-color: #45a29e0d;
+    }
+  }
+
+  p {
+    font-size: rem(20);
+    line-height: 1.4;
+
+    @include breakpoint(tablet) {
+      font-size: rem(18);
     }
   }
 }
@@ -117,6 +130,10 @@ body {
     min-height: 100vh;
     padding: 0 rem(150);
     box-sizing: border-box;
+
+    @include breakpoint(tablet) {
+      padding: 0 rem(50);
+    }
   }
 
   header {
@@ -132,7 +149,7 @@ body {
     &.scroll-up {
       backdrop-filter: blur(rem(3));
       background-color: #1f2833e6;
-      box-shadow: -1px 1px 15px -10px #e9f3ff5c;
+      box-shadow: -1px 1px 15px -10px #e9f3ff33;
       top: 0;
     }
 
@@ -219,6 +236,17 @@ body {
               display: flex;
             }
 
+            @include breakpoint(tablet) {
+              width: 60%;
+              right: -60%;
+            }
+
+            @include breakpoint(mobile) {
+              width: 100%;
+              right: -100%;
+            }
+
+
             nav {
               display: flex;
               flex-direction: column;
@@ -298,6 +326,10 @@ body {
       color: $teal;
       margin-bottom: rem(15);
       line-height: 1;
+
+      @include breakpoint(tablet) {
+        font-size: rem(15);
+      }
     }
 
     .title {
@@ -313,14 +345,20 @@ body {
       span {
         color: $gray;
       }
+
+      @include breakpoint(tablet) {
+        font-size: rem(50);
+      }
     }
 
     .short-description {
       max-width: rem(540);
       color: $gray;
-      font-size: rem(20);
       margin: rem(25) 0 0 0;
-      line-height: 1.4;
+
+      @include breakpoint(tablet) {
+        margin-top: rem(10);
+      }
     }
 
     .cta-button {
@@ -335,6 +373,10 @@ body {
       box-sizing: border-box;
       text-decoration: none;
       margin-top: rem(25);
+      
+      @include breakpoint(tablet) {
+        font-size: rem(16);
+      }
     }
   }
 

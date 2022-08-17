@@ -10,6 +10,7 @@ import ExpertiseSection from '../components/sections/ExpertiseSection';
 export const IndexPageTemplate = ({
   landingsection,
   aboutsection,
+  expertisesection,
 }) => {
 
   return (
@@ -21,10 +22,15 @@ export const IndexPageTemplate = ({
         shortdesc={landingsection.shortdesc} 
       />
       <AboutSection 
+        heading={aboutsection.heading}
         description={aboutsection.description}
         techstacks={aboutsection.techstacks}
       />
-      <ExpertiseSection />
+      <ExpertiseSection
+        heading={expertisesection.heading}
+        description={expertisesection.description}
+        companies={expertisesection.companies}
+      />
     </div>
   );
 };
@@ -34,6 +40,9 @@ IndexPageTemplate.propTypes = {
     blurbs: PropTypes.array,
   }),
   aboutsection: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
+  expertisesection: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
 };
@@ -46,6 +55,7 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         landingsection={frontmatter.landingsection}
         aboutsection={frontmatter.about}
+        expertisesection={frontmatter.expertise}
       />
     </Layout>
   );
@@ -72,11 +82,24 @@ export const pageQuery = graphql`
           title
         }
         about {
+          heading
           description
           techstacks {
             techstackname
             stack {
               stackname
+            }
+          }
+        }
+        expertise {
+          heading
+          description
+          companies {
+            companyname
+            jobtitle
+            dateattended
+            roles {
+              roledescription
             }
           }
         }
