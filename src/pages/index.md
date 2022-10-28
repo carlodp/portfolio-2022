@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 landingsection:
-  beforetitle: Sup, my name is
+  beforetitle: Hey, my name is
   title: Carlo Santos.
   subtitle: I build things for the web.
   shortdesc: I’m a software engineer specializing in building (and occasionally
