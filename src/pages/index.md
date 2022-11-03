@@ -79,28 +79,32 @@ expertise:
 
     Here are a few technologies I’ve been working with recently:
   companies:
-    - companyname: Incenter Solutions
+    - companyname: Incenter Solutions LLC
       jobtitle: WordPress Developer
       dateattended: October 2020 – Present
       roles:
         - roledescription: Role 1
         - roledescription: Role 2
+      companyinitials: Incenter
     - companyname: Bigcat Software Solutions
       jobtitle: Front-End Developer
       dateattended: June 2018 – July 2020
       roles:
         - roledescription: Role 3
         - roledescription: Role 4
+      companyinitials: Bigcat
     - companyname: Xibre Digital
       jobtitle: Lead Web Developer
       dateattended: July 2016 – June 2018
       roles:
         - roledescription: Role 5
         - roledescription: Role 6
+      companyinitials: Xibre
     - companyname: Innov8tive Design & Development
       jobtitle: Jr. Web Developer
       dateattended: July 2015 – July 2016
       roles:
         - roledescription: Role 7
         - roledescription: Role 8
+      companyinitials: IDD
 ---
