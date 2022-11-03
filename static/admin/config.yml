@@ -100,6 +100,7 @@ collections:
                   widget: list,
                   fields:
                     [
+                      { label: Company Initials, name: companyinitials , widget: string },
                       { label: Company Name, name: companyname , widget: string },
                       { label: Job Title, name: jobtitle , widget: string },
                       { label: Date Attended, name: dateattended , widget: string },
