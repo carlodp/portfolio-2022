@@ -1,10 +1,12 @@
-//Site Theme Colors
-$semi-black: #0B0C10;
-$blue-gray: #1F2833;
-$gray: #C5C6C7;
-$teal: #66FCF1;
-$dark-teal: #45A29E;
-$white: #FFFFFF;
+//Site Main Colors
+$main-blue: #1D2B34;
+$main-gray: #C5C6C7;
+$main-teal: #7CC9CF;
+
+//Site Secondary Colors 
+$secondary-black: #1E1F1F;
+$secondary-teal: #45A29E;
+$white: #DFDFDF;
 
 @import "~bulma/sass/utilities/initial-variables";
 
@@ -38,14 +40,14 @@ $white: #FFFFFF;
 }
 
 ::selection {
-  color: $blue-gray;
-  background-color: $dark-teal;
+  color: $main-blue;
+  background-color: $main-teal;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background-color: $blue-gray;
+  background-color: $main-blue;
   margin: 0px;
   width: 100%;
   min-height: 100%;
@@ -64,13 +66,24 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $dark-teal;
+    background-color: $main-teal;
     border-radius: rem(6);
-    border: rem(4) solid $blue-gray;
+    border: rem(4) solid $main-blue;
   }
 
-  a {
-    color: $dark-teal;
+  a, button {
+    color: $main-teal;
+    transition: all .1s ease-out;
+
+    &:focus {
+      outline: rem(2) dashed $main-gray;
+      outline-offset: rem(3);
+
+      &:not(:focus-visible) {
+        outline: none;
+        outline-offset: rem(0);
+      }
+    }
 
     &:hover {
       background-color: #45a29e0d;
@@ -93,7 +106,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: $blue-gray;;
+  background-color: $main-blue;;
 
   img {
     position: absolute;
@@ -105,7 +118,7 @@ body {
 
 .loading {
   animation: preloader 1s infinite ease-in-out;
-  background-color: $dark-teal;
+  background-color: $main-teal;
   border-radius: 100%;
   height: rem(100);
   width: rem(100);
@@ -148,7 +161,7 @@ body {
 
     &.scroll-up {
       backdrop-filter: blur(rem(3));
-      background-color: #1f2833e6;
+      background-color: #1d2b34cc;
       box-shadow: -1px 1px 15px -10px #e9f3ff33;
       top: 0;
     }
@@ -222,7 +235,7 @@ body {
             justify-content: center;
             position: fixed;
             height: 100%;
-            background: $blue-gray;
+            background: $main-blue;
             top: 0;
             width: rem(400);
             right: rem(-400);
@@ -281,26 +294,26 @@ body {
             
             a {
               font-family: 'Source Code Pro', monospace;
-              padding: 0 rem(15);
+              padding: rem(10) rem(15);
               text-decoration: none;
               font-size: rem(14);
               color: $white;
     
               &:hover {
-                color: $teal;
+                color: $main-teal;
               }
     
               span {
                 padding-right: rem(5);
-                color: $teal;
+                color: $main-teal;
               }
     
               &.resume {
                 display: inline-block;
-                border: rem(1) solid $teal;
+                border: rem(1) solid $main-teal;
                 padding: rem(10) rem(20);
                 border-radius: rem(5);
-                color: $teal;
+                color: $main-teal;
                 margin-left: rem(15);
                 text-align: center;
                 box-sizing: border-box;
@@ -315,13 +328,13 @@ body {
   .section-name {
     font-family: "Source Code Pro", monospace;
     font-size: rem(22);
-    color: $teal;
+    color: $main-teal;
     margin: 0 0 rem(12) 0;
     letter-spacing: rem(-2);
   }
 
   .description {
-    color: $gray;
+    color: $main-gray;
     font-size: rem(20);
     line-height: 1.4;
     max-width: rem(1000);
@@ -334,7 +347,7 @@ body {
       }
 
       a {
-        color: $dark-teal;
+        color: $main-teal;
       }
     }
   }
@@ -349,7 +362,7 @@ body {
     .before-title {
       font-family: 'Source Code Pro', monospace;
       font-size: rem(18);
-      color: $teal;
+      color: $main-teal;
       margin-bottom: rem(15);
       line-height: 1;
 
@@ -369,7 +382,55 @@ body {
       }
 
       span {
-        color: $gray;
+        position: relative;
+        color: $main-gray;
+        z-index: -1;
+
+        @keyframes title-firstload {
+          0% {
+            width: 0;
+          }
+          100% {
+            width: 100%;
+          }
+        }
+
+        
+        @keyframes title-code-anim {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 100%;
+          }
+        }
+
+        &:before {
+          content: '';
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #283D4A;
+          transition: width 1s ease-in-out;
+          animation: title-firstload 1s ease-in-out;
+        }
+
+        &:after {
+          content: "";
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          opacity: 0;
+          right: -15px;
+          width: 5px;
+          height: 100%;
+          background-color: #ebeff2;
+          animation: title-code-anim 1.2s steps(2) infinite;
+          animation-delay: 1s;
+        }
       }
 
       @include breakpoint(tablet) {
@@ -379,7 +440,7 @@ body {
 
     .short-description {
       max-width: rem(540);
-      color: $gray;
+      color: $main-gray;
       margin: rem(25) 0 0 0;
 
       @include breakpoint(tablet) {
@@ -389,12 +450,12 @@ body {
 
     .cta-button {
       display: inline-block;
-      border: rem(1) solid $teal;
+      border: rem(1) solid $main-teal;
       font-size: rem(18);
       font-weight: 500;
       padding: rem(15) rem(40);
       border-radius: rem(5);
-      color: $teal;
+      color: $main-teal;
       text-align: center;
       box-sizing: border-box;
       text-decoration: none;
@@ -431,7 +492,7 @@ body {
           margin: 0;
 
           li {
-            color: $gray;
+            color: $main-gray;
             margin-bottom: rem(10);
           }
         }
@@ -441,27 +502,76 @@ body {
 
   .expertise {
     .companies-container {
-      .title-company {
-        display: flex;
-        font-weight: 500;
-        
-        p {
-          margin: 0;
-        }
+      display: flex;
+      justify-content: space-between;
+      gap: rem(50);
+      max-width: rem(1000);
 
-        .title {
-          color: $white;
-        }
+      .company-tablist {
+        width: rem(200);
+        .company-name {
+          cursor: pointer;
+          width: 100%;
+          background-color: transparent;
+          border: 0;
+          text-align: left;
+          padding: rem(10) 0;
+          color: white;
+          p {
+            margin: 0;
+          }
 
-        .company {
-          color: $dark-teal;
-          margin-left: rem(5);
-
-          &:before {
-            content: '@';
-            margin-right: rem(5);
+          &:first-child {
+            padding-top: 0;
           }
         }
+      }
+
+      .company-tabs {
+        flex: 1;
+        .company-tab {
+          .tab-single {
+            display: none;
+          }
+
+          &.show {
+            .tab-single {
+              display: block;
+            }
+          }
+
+          .title-company {
+            display: flex;
+            font-weight: 500;
+            
+            p {
+              margin: 0;
+            }
+  
+            .title {
+              color: $white;
+            }
+  
+            .company {
+              color: $main-teal;
+              margin-left: rem(5);
+  
+              &:before {
+                content: '@';
+                margin-right: rem(5);
+              }
+            }
+          }
+
+          .date-attended {
+            color: $main-gray;
+            margin: rem(5) 0 0 0;
+            font-size: rem(16);
+            line-height: 1;
+          }
+        }
+        
+        
       }
     }
   }

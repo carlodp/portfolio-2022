@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 import NavMenu from "./NavMenu";
+import Reveal from 'react-reveal/Reveal';
+import logolight from "../img/logo-light.svg";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -55,10 +57,11 @@ const Navbar = class extends React.Component {
         >
           <div className="container">
             <div className="navbar-brand">
-              <Link to="/" className="navbar-item site-logo" title="Logo">
-                {/* <img src={logo} alt="Kaldi" style={{ width: "88px" }} /> */}
-                carlosantos.dev
-              </Link>
+            <Link to="/" className="navbar-item site-logo" title="Logo">
+              <Reveal effect={`navbar-item fadein-down`}>
+                <img src={logolight} alt="Logo" style={{ width: "88px" }} />
+              </Reveal>
+            </Link>
             </div>
             <NavMenu />
           </div>

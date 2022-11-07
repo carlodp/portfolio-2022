@@ -95,6 +95,7 @@ export const pageQuery = graphql`
           heading
           description
           companies {
+            companyinitials
             companyname
             jobtitle
             dateattended
